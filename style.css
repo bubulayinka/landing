@@ -1,0 +1,471 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --orange:#b4a284;
+    --white:#f6ead4;
+    --textcolor:rgb(28, 27, 27);
+    --bg:#e7ecef;
+}
+html{
+    scroll-behavior: smooth;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+li{
+    list-style: none;
+    transition: .5s;
+    opacity: .7;
+}
+li:hover{
+    cursor: pointer;
+    color: var(--orange);
+}
+p{
+    font-size: .6rem;
+}
+body{
+    font-size: 16px;
+    max-width: 1024px;
+    margin: 0 auto;
+    color: var();
+    background-color: var(--bg);
+    
+}
+header{
+    
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: var(--white);
+    border-bottom: azure 1px solid;
+    color: var(--textcolor);
+}
+header i{
+    color: var(--textcolor);
+}
+button{
+    
+    border: none;
+    cursor: pointer;
+    background-color: var(--orange);
+    
+    padding: .5rem 1.5rem;
+    font-size: .6rem;
+    font-weight: bold;
+    transition: .5s;
+}
+button:hover{
+    background: azure;
+    
+}
+nav{
+    display: none;
+}
+img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.logo{
+    font-size: .7rem;
+    cursor: pointer;
+}
+.logo span{
+    color: var(--orange);
+}
+.menu i{
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+.menuIcon{
+    transition: 0.5s;
+}
+.mobileNav{
+    height: calc(100vh - 80px);
+    z-index: 9;
+    position: fixed;
+    top: 80px;
+    left: 0;
+    background: var(--white);
+    width: 100%;
+    clip-path: inset(0 0 100% 0);
+    transition: .5s linear;
+}
+.openMobileNav{
+    clip-path: inset(0 0 0 0);
+
+}
+.mobileNav ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    height: 60%;
+}
+.mobileNav ul li{
+    font-size: .7rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+}
+.mobileNav ul li:first-child{
+    color: var(--orange) !important;
+}
+#main{
+    height: calc(100vh - 80px);
+    background: url("images/six.jpg");
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: grid;
+    place-items: center;
+    transition: .5s;
+    justify-content: center;
+    align-items: center;
+}
+.mainCover{
+    position: absolute;
+    background: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+#main .container{
+    position: relative;
+    color: white;
+    z-index: 1;
+    width: 100%;
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#main h1{
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+#main p{
+    font-size: .8rem;
+    width: 40ch;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+#main button{
+    margin: 0 auto;
+}
+.slideBackground{
+    
+    width: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-self:end;
+    margin-bottom: 20px;
+}
+.slideBackground1{
+    width: 1.5rem;
+    height: 2px;
+    background: var(--white);
+    z-index: 1;
+    margin: 2px 0;
+}
+.slideBackground1:hover{
+    background: var(--orange);
+}
+#about{
+    padding: 1.2rem 1.5rem;
+}
+.abouttext{
+    padding: 1rem 0;
+}
+.abouttext h2{
+    font-size: .8rem;
+    font-weight: 600;
+    margin-bottom: .5rem;
+}
+.abouttext p{
+    padding: .5rem 0;
+    line-height: 1.1rem;
+}
+#services h3{
+    font-size: .9rem;
+    margin-bottom: .2rem;
+    text-align: center; 
+}
+#contact h3{
+    font-size: .9rem;
+    margin-bottom: .2rem;
+    text-align: center;  
+}
+#portfolio h3{
+    font-size: .9rem;
+    margin-bottom: .2rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+#team h3{
+    font-size: .9rem;
+    margin-bottom: .2rem;
+    text-align: center;
+    padding-top: 2rem;
+}
+i{
+    color: var(--orange);
+}
+#services p,
+#portfolio p,
+#team p,
+#contact p{
+    text-align: center;
+}
+.servicesGrid,
+.portfolioGrid,
+.teamGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+#services{
+    padding: 0 1.5rem;
+}
+.card{
+    height: 200px;
+    background: #e7ecef;
+    color: ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem .3rem;
+    justify-content: center;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+}
+.card .cardIcon{
+    font-size: 1.5rem;
+    margin-bottom: .2rem;
+}
+.card h4{
+    font-size: .8rem;
+    margin-bottom: .2rem;
+}
+.card p{
+    font-size: .5rem;
+    width: 50ch;
+}
+.card button{
+    margin-top: .5rem;
+}
+.portfolioCard{
+    margin: 1rem 0;
+    padding: 1rem;
+    height: 500px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+    transition: .5s;
+}
+.portfolioCard:hover{
+    transform: scale(1.01);
+}
+.portfolioImage img{
+    height: 320px;
+}
+.portfolioText{
+    padding: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.portfolioText p{
+    padding: .5rem 0;
+    width: 50ch;
+}
+#team{
+    padding: 0 1.5rem;
+}
+.teamCard{
+    margin: 1rem 0;
+    padding: 2rem 1rem;
+    height: 350px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.5);
+    transition: .5s;
+    
+}
+.teamImage{
+    display: flex;
+    justify-content: center;
+}
+.teamImage img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+}
+.teamText{
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#contact p{
+   margin-bottom: 1rem;
+    
+}
+.contactMap{
+    margin: 1rem 0;
+}
+form{
+    width: 100%;
+    padding: 0 1.5rem;
+   
+}
+input,
+textarea{
+    width: 100%;
+    padding: .5rem;
+    margin-bottom: .5rem;
+    border:none;
+    background: #a2a595;
+    font-size: .8rem;
+    transition: .5s;
+
+}
+input{
+    padding: 1rem 0;
+}
+textarea{
+height: 100px;
+}
+iframe{
+    width: 100%;
+    padding: 0 1.5rem;
+    height: 50%;
+}
+form button{
+    width: 100%;
+}
+footer{
+    font-size: .7rem;
+    text-align: center;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    background: var(--orange); 
+    margin-top: 10px;
+}
+::placeholder{
+    padding: 0 1.5rem;
+}
+@media only screen and (min-width:768px){
+    #about{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        gap: 2rem;
+        padding: 3rem 1.2rem;
+    }
+    .contactContent{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        
+    }
+    #contact{
+        padding: 1.5rem 0;
+    }
+    #contact h3{
+        font-size: 1.5rem;
+        padding-bottom: 2rem;
+    }
+    iframe{
+        width: 100%;
+        padding: 0 1.5rem;
+        height: 80%;
+    }
+}
+@media only screen and (min-width:1024px){
+    .logo{
+        font-size: 1rem;
+    }
+    #about{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .abouttext{
+        padding: 2rem 0;
+    }
+    .abouttext h2{
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-bottom: .5rem;
+    }
+    .abouttext p{
+        padding: .5rem 0;
+        line-height: 1.5rem;
+        font-size: .8rem;
+    }
+    
+   #main button{
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: .5s;
+    }
+    h3{
+        font-size: 1.5rem !important;
+    }
+    .menu{
+        display: none;
+    }
+    nav{
+        display: block;
+    }
+    nav ul{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    nav ul li{
+        margin-left: 1.2rem;
+        font-size: .8rem;
+    }
+    #main p{
+        width: 60ch;
+        line-height: 1.5rem;
+        font-size: 1.3rem;
+    }
+    #about{
+        align-items: center;
+    }
+    #about p{
+        width: 100ch;
+        padding: 1rem 0;
+    }
+    .teamGrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;   
+    }
+    #services,
+    #portfolio,
+    #team,
+    #contact{
+        padding: 2rem 1.2rem;
+    }
+    footer{
+        font-size: 1.5rem;
+    }
+}
